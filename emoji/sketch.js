@@ -1,10 +1,10 @@
 function setup(){
-    createCanvas(800, 800);
+    createCanvas(600, 500);
 }
 
 function draw(){
     // Fill entire canvas with background color    
-    background(30);
+    background(30);    
 
     // Draw the face
     noFill();
@@ -49,4 +49,30 @@ function draw(){
     vertex(371, 200);
     bezierVertex(355, 180, 330, 180, 325, 182);
     endShape();
+
+    push();
+        translate(310, 340);
+        scale(2);
+        fill(200);
+        stroke(40);
+        strokeWeight(0.4);
+        beginShape();
+        vertex(0, 0);
+        vertex(20, 20);
+        vertex(100, 20);
+        vertex(100, 50);
+        vertex(-10, 50);
+        vertex(-10, 20);
+        vertex(0, 20);
+        vertex(0, 0);
+        endShape();
+    pop();
+
+    push();
+        translate(310, 417);
+        scale(2);
+        fill(40);
+        noStroke();
+        text("So glad its over...", 0, 0);
+    pop();    
 }
